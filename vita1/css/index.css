@@ -1,0 +1,648 @@
+@charset "UTF-8";
+@import url(base.css);
+@import url(animate.css);
+@font-face {
+  font-family: "A,sans-serif";
+  src: url("../font/Okomito-Bold.woff2"); }
+
+* {
+  box-sizing: border-box;
+  font-family: "A,sans-serif"; }
+
+body {
+  overflow: hidden; }
+
+.head {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  right: 0;
+  text-align: right;
+  z-index: 8266;
+  background: #FFF;
+  color: #333;
+  float: right;
+  transition: 0.5s ease 0.2s;
+  animation: yi 1s linear 0.2s both; }
+
+@keyframes yi {
+  0% {
+    transform: translate3d(500px, 0, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+  .head .my {
+    width: 140px;
+    height: 145px;
+    margin: 20px auto; }
+    .head .my img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 20px; }
+  .head .uls li {
+    display: none; }
+    .head .uls li a {
+      display: block;
+      line-height: 50px;
+      font-size: 16px;
+      color: #000;
+      padding-right: 66px; }
+      .head .uls li a:hover {
+        animation: pulse ease .8s both; }
+  .head .uls .hong {
+    width: 100%;
+    height: 100%;
+    background: #486d7e; }
+    .head .uls .hong a {
+      color: #fff; }
+  .head .closed {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    width: 100px;
+    height: 100px;
+    background: url(../img/likai.jpg) no-repeat;
+    background-size: cover;
+    z-index: 888;
+    border-radius: 50%; }
+    .head .closed .put-on {
+      display: none; }
+    .head .closed .closed-on {
+      display: none; }
+      .head .closed .closed-on .closed-on-on {
+        width: 50px;
+        height: 50px;
+        background: url(../img/qipao.png) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 75px;
+        left: 30px; }
+      .head .closed .closed-on p {
+        position: absolute;
+        top: 55px;
+        left: 25px; }
+    .head .closed:hover .closed-on {
+      width: 110px;
+      height: 110px;
+      background: url(../img/yun.png) no-repeat;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      top: -120px;
+      left: -10px;
+      animation: closed 0.5s linear both; }
+
+@keyframes closed {
+  0% {
+    transform: translate3d(30%, 30%, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+      .head .closed:hover .closed-on p {
+        color: #00a0e9;
+        font-size: 18px; }
+    .head .closed:hover .put-on {
+      display: none; }
+  .head .put {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    background: url(../img/lai.jpg) no-repeat;
+    background-size: cover;
+    z-index: 888;
+    border-radius: 50%; }
+    .head .put .closed-on-on {
+      width: 50px;
+      height: 50px;
+      background: url(../img/qipao.png) no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 75px;
+      left: 30px; }
+    .head .put p {
+      position: absolute;
+      top: 55px;
+      left: 25px; }
+    .head .put:hover .put-on {
+      width: 110px;
+      height: 110px;
+      background: url(../img/yun.png) no-repeat;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      top: -120px;
+      left: -10px;
+      animation: put 0.5s linear both; }
+
+@keyframes put {
+  0% {
+    transform: translate3d(-30%, 30%, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+      .head .put:hover .put-on p {
+        color: #00a0e9;
+        font-size: 18px; }
+    .head .put:hover .closed-on {
+      display: none; }
+
+.head1 {
+  animation: yi1 0.8s linear 0.3s both; }
+
+@keyframes yi1 {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(100%, 0, 0); } }
+
+.head .uls li:nth-child(1) {
+  animation: yid 0.8s ease 0.3s both;
+  display: block; }
+
+.head .uls li:nth-child(2) {
+  animation: yid 0.8s ease 0.6s both;
+  display: block; }
+
+.head .uls li:nth-child(3) {
+  animation: yid 0.8s ease 0.9s both;
+  display: block; }
+
+.head .uls li:nth-child(4) {
+  animation: yid 0.8s ease 1.2s both;
+  display: block; }
+
+.head .uls li:nth-child(5) {
+  animation: yid 0.8s ease 1.5s both;
+  display: block; }
+
+.head .jt > div:nth-child(1) {
+  animation: yid 2s ease 0.2s both;
+  display: block; }
+
+.head .jt > div:nth-child(2) {
+  animation: yid 2s ease 0.4s both;
+  display: block; }
+
+.head .jt > div:nth-child(3) {
+  animation: yid 2s ease 0.6s both;
+  display: block; }
+
+.head .jt > div:nth-child(4) {
+  animation: yid 2s ease 0.8s both;
+  display: block; }
+
+.head .jt > div:nth-child(5) {
+  animation: yid 2s ease 1s both;
+  display: block; }
+
+@keyframes yid {
+  0% {
+    transform: translate3d(500px, 0, 0);
+    display: none; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    display: block; } }
+
+.box {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  transition: 0.5s ease 1s;
+  overflow: hidden; }
+  .box .Box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    animation: load 4s ease 0.2s both; }
+    .box .Box .dengdai {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 60px;
+      text-align: center; }
+      .box .Box .dengdai h2 {
+        font-size: 22px;
+        color: #fefefe; }
+      .box .Box .dengdai span {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+        display: inline-block;
+        margin: 6px 2px;
+        animation: mei 3s infinite; }
+      .box .Box .dengdai .span1-1 {
+        animation-delay: 1s; }
+      .box .Box .dengdai .span1-2 {
+        animation-delay: 0.8s; }
+      .box .Box .dengdai .span1-3 {
+        animation-delay: 0.6s; }
+      .box .Box .dengdai .span1-4 {
+        animation-delay: 0.4s; }
+      .box .Box .dengdai .span1-5 {
+        animation-delay: 0.2s; }
+      .box .Box .dengdai .span1-6 {
+        animation-delay: 0s; }
+
+@keyframes mei {
+  0% {
+    -webkit-transform: translateX(-30px);
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  50% {
+    -webkit-transform: translateX(30px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes load {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .box .boxs {
+    width: 100%;
+    height: 100vh; }
+    .box .boxs .live {
+      vertical-align: middle;
+      width: 100%;
+      height: 100vh;
+      position: relative !important; }
+    .box .boxs .package {
+      width: 100%;
+      height: 100vh; }
+    .box .boxs .tu {
+      width: 100%;
+      height: 100vh;
+      z-index: 11;
+      background: url(../img/banner.jpg) no-repeat;
+      background-size: cover;
+      transition: all 1s ease 1s;
+      animation: tu 2s ease; }
+      .box .boxs .tu .index-zi {
+        text-align: center;
+        z-index: 1;
+        width: 960px;
+        height: 100%;
+        margin: 0 auto;
+        background: rgba(74, 73, 65, 0.3);
+        padding-top: 180px; }
+        .box .boxs .tu .index-zi h2 {
+          padding-top: 30px;
+          color: #276d48;
+          font-size: 50px;
+          font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif; }
+        .box .boxs .tu .index-zi .box-span {
+          margin-top: 20px;
+          font-size: 30px;
+          font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+          display: block;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.8);
+          padding-top: 30px; }
+        .box .boxs .tu .index-zi .box-span1 {
+          margin-top: 20px;
+          font-size: 30px;
+          font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+          display: block;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.8); }
+        .box .boxs .tu .index-zi p {
+          padding-top: 10px;
+          text-align: left; }
+      .box .boxs .tu .boxshowd {
+        width: 960px;
+        height: 100%;
+        margin: 0 auto;
+        background: rgba(74, 73, 65, 0.5);
+        opacity: 0.6; }
+
+@keyframes tu {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .active .package .index-zi h2 {
+      animation: shang 2s ease; }
+
+@keyframes shang {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .active .package .index-zi .box-span {
+      animation: left 2s ease; }
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .active .package .index-zi .box-span1 {
+      animation: right 2s ease; }
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .tu1 {
+      width: 100%;
+      height: 100vh;
+      background: #333;
+      transition: all .8s ease 1s; }
+      .box .boxs .tu1 .exper {
+        width: 40%;
+        height: auto;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        margin-left: -25%;
+        text-align: center; }
+        .box .boxs .tu1 .exper h2 {
+          padding-top: 30px;
+          color: #cddc39;
+          font-size: 50px;
+          font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif; }
+        .box .boxs .tu1 .exper .exper-con {
+          width: 100%;
+          height: auto; }
+          .box .boxs .tu1 .exper .exper-con img {
+            width: 200px;
+            height: 200px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin-top: 20px; }
+    .box .boxs .active .package .exper h2 {
+      animation: aa 1s ease; }
+
+@keyframes aa {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0); }
+  30% {
+    opacity: 1;
+    transform: translate3d(20%, 0, 0); }
+  50% {
+    transform: translate3d(-15%, 0, 0); }
+  70% {
+    transform: translate3d(10%, 0, 0); }
+  90% {
+    transform: translate3d(-5%, 0, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .active .package .exper img {
+      animation: imgs 1s ease; }
+
+@keyframes imgs {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0); }
+  30% {
+    opacity: 1;
+    transform: scale(1.2, 1.2); }
+  60% {
+    opacity: 1;
+    transform: scale(0.8, 0.8); }
+  80% {
+    opacity: 1;
+    transform: scale(1.1, 1.1); }
+  100% {
+    transform: scale(1, 1); } }
+    .box .boxs .active .package .exper p {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #fff;
+      animation: imgs 1s ease; }
+    .box .boxs .tu2 {
+      width: 100%;
+      height: 100vh;
+      transition: all .8s ease 1s;
+      background: url(../img/banner1.jpg) no-repeat;
+      background-size: cover; }
+      .box .boxs .tu2 .tu-mask {
+        width: 100%;
+        height: 100%;
+        padding-top: 150px; }
+      .box .boxs .tu2 .anim {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        margin: auto;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg);
+        animation: fn 10s;
+        animation-iteration-count: infinite;
+        /* 表示无限次数 */
+        animation-timing-function: linear;
+        /* 表示动画从头到尾速度一样 */ }
+
+@keyframes fn {
+  0% {
+    transform: rotateX(-15deg) rotateY(0deg); }
+  100% {
+    transform: rotateX(-15deg) rotateY(360deg); } }
+      .box .boxs .tu2 .anim > div {
+        width: 240px;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .box .boxs .tu2 .anim img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease; }
+      .box .boxs .tu2 div:hover {
+        animation-play-state: paused; }
+      .box .boxs .tu2 .anim a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative; }
+      .box .boxs .tu2 .anim a:hover img {
+        transform: scale(1.1, 1.1); }
+      .box .boxs .tu2 .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.5s ease; }
+      .box .boxs .tu2 .anim a:hover .mask {
+        opacity: 1;
+        z-index: 11;
+        animation: anim 0.8s;
+        transform: scale(1.1, 1.1); }
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 50%, 0) scale(0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1.1, 1.1); } }
+      .box .boxs .tu2 .mask h2 {
+        padding-top: 50px;
+        text-align: center;
+        font-size: 22px;
+        color: #fff;
+        font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif; }
+      .box .boxs .tu2 .anim a:hover .mask h2 {
+        animation: mask-zi 1s ease; }
+
+@keyframes mask-zi {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, -50%, 0) scale(0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1, 1); } }
+      .box .boxs .tu2 .mask p {
+        font-size: 18px;
+        color: #FFFBE1;
+        padding: 15px 25px;
+        text-align: center; }
+      .box .boxs .tu2 .anim a:hover .mask p {
+        animation: mask-p 1s ease; }
+
+@keyframes mask-p {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, -50%, 0) scale(0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1, 1); } }
+    .box .boxs .tu3 {
+      width: 100%;
+      height: 100vh;
+      background-color: #2d2d2d;
+      transition: all .8s ease 1s; }
+      .box .boxs .tu3 h1 {
+        font-size: 150px;
+        color: #262626;
+        line-height: 160px;
+        font-weight: 700; }
+      .box .boxs .tu3 .scr {
+        width: 100%;
+        height: 100%; }
+        .box .boxs .tu3 .scr li {
+          width: 33.33333%;
+          padding-top: 30px;
+          float: left;
+          padding-left: 15px;
+          padding-right: 15px; }
+          .box .boxs .tu3 .scr li p {
+            color: #3d3d3d;
+            text-decoration: none;
+            line-height: 30px;
+            padding: 10px 0;
+            font-size: 14px;
+            transition: 0.4s; }
+      .box .boxs .tu3 .bias {
+        width: 100%;
+        height: 100%; }
+        .box .boxs .tu3 .bias .piece {
+          position: absolute;
+          left: 50%;
+          transition: transform 1s linear; }
+          .box .boxs .tu3 .bias .piece .top_face {
+            background: blue;
+            top: -158px;
+            transform: rotate(60deg); }
+            .box .boxs .tu3 .bias .piece .top_face .face {
+              width: 180px;
+              height: 180px;
+              transform: skew(0deg, -30deg) scale(1, 1.16); }
+          .box .boxs .tu3 .bias .piece .left_face {
+            transform: skew(0deg, 30deg);
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: red; }
+    .box .boxs .tu4 {
+      width: 100%;
+      height: 100vh;
+      background: url("../img/my-bj5.jpg") no-repeat;
+      background-size: cover;
+      overflow: hidden; }
+      .box .boxs .tu4 h2 {
+        margin-top: 20px;
+        font-size: 40px;
+        color: #262626;
+        font-weight: 700;
+        text-align: center; }
+      .box .boxs .tu4 .lianxi {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        margin-left: -15%; }
+      .box .boxs .tu4 .shang {
+        width: 100%;
+        height: 50%;
+        background: #16BA9D;
+        transition: all 0.8s ease; }
+      .box .boxs .tu4 .xia {
+        width: 100%;
+        height: 50%;
+        background: #16BA9D;
+        transition: all 0.8s ease; }
+      .box .boxs .tu4 p {
+        text-align: center;
+        color: #333;
+        font-size: 26px;
+        font-weight: 600;
+        font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif; }
+    .box .boxs .active .package h2 {
+      animation: right 2s ease; }
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .active .package p {
+      animation: left 2s ease; }
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+    .box .boxs .active .package .shang {
+      transform: translate3d(0, -30%, 0); }
+    .box .boxs .active .package .xia {
+      transform: translate3d(0, 30%, 0); }

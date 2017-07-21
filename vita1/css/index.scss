@@ -1,0 +1,778 @@
+@import url(base.css);
+@import url(animate.css);
+@import "mixin";
+@font-face{
+	font-family: "A,sans-serif";
+	src:url('../font/Okomito-Bold.woff2');
+}
+*{
+	box-sizing: border-box;
+	font-family: "A,sans-serif";
+}
+body{
+	overflow: hidden;
+}
+
+
+.head{
+	position: absolute;
+    width: 250px;
+    height: 100vh;
+    right: 0;
+    text-align: right;
+    z-index: 8266;
+    background: #FFF;
+    color: #333;
+	float: right;
+	transition:  0.5s ease 0.2s;
+    animation: yi 1s linear 0.2s both;
+    @keyframes yi{
+		0%{
+		transform:translate3d(500px,0,0);
+			opacity: 0;
+		}
+		100%{
+			transform:translate3d(0,0,0);
+			opacity: 1;
+		}
+	}
+		.my{
+			width: 140px;
+			height: 145px;
+			margin: 20px auto;
+			img{
+				width: 100%;
+				height: 100%;
+				display: block;
+				border-radius:20px;
+			}
+		}
+    .uls{
+    	li{
+    		display: none;
+    		a{
+    			display: block;
+			    line-height: 50px;
+			    font-size: 16px;
+			    color: #000;
+			    //text-decoration: none;
+			    padding-right: 66px;
+			    //position: relative;
+			    &:hover{
+					animation:pulse ease .8s both;
+			    }
+    		}
+    	}
+		.hong{
+			width: 100%;
+			height: 100%;
+			background: #486d7e;
+			a{
+				color: #fff;
+			}
+		 }
+    }
+
+	.closed{
+		position: absolute;
+		top:50%;
+		margin-top: -25px;
+		width: 100px;
+		height: 100px;
+		background: url(../img/likai.jpg) no-repeat;
+		background-size: cover;
+		z-index: 888;
+		border-radius: 50%;
+		.put-on{
+			display: none;
+		}
+		.closed-on{
+			display: none;
+			.closed-on-on{
+				width: 50px;
+				height: 50px;
+				background: url(../img/qipao.png) no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 75px;
+				left: 30px;
+			}
+			p{
+				position: absolute;
+				top: 55px;
+				left: 25px;
+			}
+		}
+		&:hover .closed-on{
+			width: 110px;
+			height: 110px;
+			background: url(../img/yun.png) no-repeat;
+			background-size: cover;
+			display: block;
+			position: absolute;
+			top: -120px;
+			left: -10px;
+			animation: closed 0.5s linear both;
+			@keyframes closed{
+				0%{
+					transform:translate3d(30%,30%,0);
+					opacity: 0;
+				}
+				100%{
+					transform:translate3d(0,0,0);
+					opacity: 1;
+				}
+			}
+			p{
+				color: #00a0e9;
+				font-size: 18px;
+			}
+		}
+
+		&:hover .put-on{
+			display: none;
+		}
+	}
+	.put{
+		position: absolute;
+		top:50%;
+		margin-top: -25px;
+		left: -100px;
+		width: 100px;
+		height: 100px;
+		background: url(../img/lai.jpg) no-repeat;
+		background-size: cover;
+		z-index: 888;
+		border-radius: 50%;
+			.closed-on-on{
+				width: 50px;
+				height: 50px;
+				background: url(../img/qipao.png) no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 75px;
+				left: 30px;
+			}
+			p{
+				position: absolute;
+				top: 55px;
+				left: 25px;
+			}
+		&:hover .put-on{
+			width: 110px;
+			height: 110px;
+			background: url(../img/yun.png) no-repeat;
+			background-size: cover;
+			display: block;
+			position: absolute;
+			top: -120px;
+			left: -10px;
+			animation: put 0.5s linear both;
+			@keyframes put{
+				0%{
+					transform:translate3d(-30%,30%,0);
+					opacity: 0;
+				}
+				100%{
+					transform:translate3d(0,0,0);
+					opacity: 1;
+				}
+			}
+			p{
+				color: #00a0e9;
+				font-size: 18px;
+			}
+		}
+
+
+		&:hover .closed-on{
+			display: none;
+		}
+	}
+}
+
+.head1{
+	animation: yi1 0.8s linear 0.3s both;
+}
+@keyframes yi1{
+	0%{
+		transform:translate3d(0,0,0);
+	}
+	100%{
+		transform:translate3d(100%,0,0);
+	}
+}
+.head .uls{
+	@for $i from 1 through 5{
+		li:nth-child(#{$i}){
+			animation: yid 0.8s ease 0.3s*$i both;
+			display: block;
+		}
+		
+	}
+}
+.head{
+	@for $i from 1 through 5{
+		.jt>div:nth-child(#{$i}){
+			animation: yid 2s ease 0.2s*$i both;
+			display: block;
+		}
+		
+	}
+}
+@keyframes yid{
+	0%{
+	transform:translate3d(500px,0,0);
+	display: none;
+	}
+	100%{
+		transform:translate3d(0,0,0);
+		display: block;
+	}
+}
+
+
+.box{
+	width: 100%;
+    height: 100vh;
+	background: #000;
+    position: relative;
+    transition:  0.5s ease 1s;
+	overflow: hidden;
+    .Box{
+    	width: 100%;
+    	height: 100%;
+    	position: fixed;
+    	background-size: cover;
+    	animation:load 4s ease 0.2s both;
+    	.dengdai{
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+    		bottom: 0;
+    		margin: auto;
+    		width: 100%;
+    		height: 60px;
+    		text-align: center;
+    		h2{
+    			font-size: 22px;
+    			color: #fefefe;
+    		}
+    		span{
+    			width: 4px;
+    			height: 4px;
+    			border-radius: 50%;
+    			background: #fff;
+    			display: inline-block;
+    			margin: 6px 2px;
+    			animation: mei 3s infinite;
+    		}
+    		.span1-1{
+    			animation-delay:1s;
+    		}
+    		.span1-2{
+    			animation-delay:0.8s;
+    		}
+    		.span1-3{
+    			animation-delay:0.6s;
+    		}
+    		.span1-4{
+    			animation-delay:0.4s;
+    		}
+    		.span1-5{
+    			animation-delay:0.2s;
+    		}
+    		.span1-6{
+    			animation-delay:0s;
+    		}
+    	}
+    }
+    @keyframes mei{
+      	0% 	{
+		    -webkit-transform: translateX(-30px);
+		    opacity: 0;
+		}
+		25% {
+		    opacity: 1;
+		}
+		50% {
+		    -webkit-transform: translateX(30px);
+		    opacity: 0;
+		}
+		100% {
+		    opacity: 0;
+		}
+    }
+    @keyframes load{
+      	0% 	{
+		    opacity: 1;
+		}
+		100% {
+		    opacity: 0;
+		}
+    }
+    .boxs {
+		width: 100%;
+		height: 100vh;
+		.live{
+			vertical-align: middle;
+			width: 100%;
+			height: 100vh;
+			position: relative !important;
+		}
+		.package{
+			width: 100%;
+			height: 100vh;
+		}
+		.tu {
+			width: 100%;
+			height: 100vh;
+			z-index: 11;
+			background: url(../img/banner.jpg) no-repeat;
+			background-size: cover;
+			transition: all 1s ease 1s;
+			animation: tu 2s ease;
+			.index-zi {
+				text-align: center;
+				z-index: 1;
+				width: 960px;
+				height: 100%;
+				margin: 0 auto;
+				background: rgba(74, 73, 65, 0.3);
+				padding-top: 180px;
+				h2 {
+					padding-top: 30px;
+					color: #276d48;;
+					font-size: 50px;
+					font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+				}
+				.box-span{
+					margin-top: 20px;
+					font-size: 30px;
+					font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+					display: block;
+					font-weight: 600;
+					color: rgba(255, 255, 255, 0.8);
+					padding-top: 30px;
+				}
+				.box-span1{
+					margin-top: 20px;
+					font-size: 30px;
+					font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+					display:block;
+					font-weight:600;
+					color: rgba(255, 255, 255, 0.8);
+				}
+				p{
+					padding-top: 10px;
+					text-align: left;
+				}
+			}
+			.boxshowd {
+				width: 960px;
+				height: 100%;
+				margin: 0 auto;
+				background: rgba(74, 73, 65, 0.5);
+				opacity: 0.6;
+			}
+		}
+		@keyframes tu {
+			0%{
+				opacity:0;
+				transform: translate3d(-100%,0,0);
+			}
+			100%{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
+
+		.active .package .index-zi h2{
+			animation: shang 2s ease;
+		}
+		@keyframes shang {
+			0%{
+				opacity:0;
+				transform: translate3d(0,-100%,0);
+			}
+			100%{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
+		.active .package .index-zi .box-span{
+			animation: left 2s ease;
+		}
+		@keyframes left {
+			0%{
+				opacity:0;
+				transform: translate3d(-100%,0,0);
+			}
+			100%{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
+		.active .package .index-zi .box-span1{
+			animation: right 2s ease;
+		}
+		@keyframes right {
+			0%{
+				opacity:0;
+				transform: translate3d(100%,0,0);
+			}
+			100%{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
+		.tu1 {
+			width: 100%;
+			height: 100vh;
+			background: #333;
+			transition: all .8s ease 1s;
+			.exper{
+				width:40%;
+				height: auto;
+				position: absolute;
+				top:10%;
+				left: 50%;
+				margin-left: -25%;
+				text-align: center;
+				h2 {
+					padding-top: 30px;
+					color: #cddc39;
+					font-size: 50px;
+					font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+				}
+				.exper-con{
+					width: 100%;
+					height: auto;
+					img{
+						width: 200px;
+						height: 200px;
+						-webkit-border-radius:50%;
+						-moz-border-radius:50%;
+						border-radius:50%;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+		.active .package .exper h2{
+			animation: aa 1s ease;
+		}
+		@keyframes aa {
+			0% {
+				opacity: 0;
+				transform: translate3d( -50%,0, 0);
+			}
+			30%{
+				opacity: 1;
+				transform: translate3d( 20%,0, 0);
+			}
+			50%{
+				transform: translate3d( -15%,0, 0);
+			}
+			70%{
+				transform: translate3d( 10%,0, 0);
+			}
+			90%{
+				transform: translate3d( -5%,0, 0);
+			}
+			100% {
+				transform: translate3d( 0, 0,0);
+			}
+		}
+		.active .package .exper img{
+			animation: imgs 1s ease;
+		}
+		@keyframes imgs {
+			0%{
+				opacity: 0;
+				transform: scale(0,0);
+			}
+			30%{
+				opacity: 1;
+				transform: scale(1.2,1.2);
+			}
+			60%{
+				opacity: 1;
+				transform: scale(0.8,0.8);
+			}
+			80%{
+				opacity: 1;
+				transform: scale(1.1,1.1);
+			}
+			100%{
+				transform: scale(1,1);
+			}
+		}
+		.active .package .exper p{
+			font-size: 20px;
+			margin-top: 10px;
+			color: #fff;
+			animation: imgs 1s ease;
+		}
+		.tu2 {
+			width: 100%;
+			height: 100vh;
+			transition: all .8s ease 1s;
+			background: url(../img/banner1.jpg) no-repeat;
+			background-size: cover;
+			.tu-mask{
+				width: 100%;
+				height: 100%;
+				padding-top: 150px;
+			}
+			.anim{
+				width: 200px;
+				height: 300px;
+				position: relative;
+				margin: auto;
+				transform-style: preserve-3d;
+				transform: rotateX(-10deg);
+				animation: fn 10s;
+				animation-iteration-count: infinite; 	/* 表示无限次数 */
+				animation-timing-function: linear;		/* 表示动画从头到尾速度一样 */
+			}
+			@keyframes fn {
+				0%{
+					transform: rotateX(-15deg) rotateY(0deg);
+				}
+				100%{
+					transform: rotateX(-15deg) rotateY(360deg);
+				}
+			}
+			.anim>div{
+				width: 240px;
+				height: 300px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.anim img{
+				width: 100%;
+				height: 100%;
+				transition: all 0.5s ease;
+			}
+			div:hover{
+				animation-play-state:paused;
+			}
+			.anim a{
+				width: 100%;
+				height: 100%;
+				display: block;
+				position:relative;
+			}
+			.anim a:hover img{
+				transform: scale(1.1,1.1);
+			}
+			.mask{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top:0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.5);
+				opacity: 0;
+				transition: all 0.5s ease;
+			}
+			.anim a:hover .mask{
+				opacity: 1;
+				z-index: 11;
+				animation: anim 0.8s;
+				transform: scale(1.1,1.1);
+			}
+			@keyframes anim {
+				0%{
+					opacity: 0;
+					transform: translate3d(-100%,50%,0) scale(0,0);
+				}
+
+				100%{
+					opacity: 1;
+					transform: translate3d(0,0,0) scale(1.1,1.1);
+				}
+			}
+			.mask h2 {
+				padding-top: 50px;
+				text-align: center;
+				font-size: 22px;
+				color: #fff;
+				font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+			}
+			.anim a:hover .mask h2{
+				 animation: mask-zi 1s ease;
+			 }
+			@keyframes mask-zi {
+				0%{
+					opacity: 0;
+					transform: translate3d(-100%,-50%,0) scale(0,0);
+				}
+				100%{
+					opacity: 1;
+					transform: translate3d(0,0,0) scale(1,1);
+				}
+			}
+			.mask p{
+				font-size: 18px;
+				color: #FFFBE1;
+				padding: 15px 25px;
+				text-align: center;
+			}
+			.anim a:hover .mask p{
+				animation: mask-p 1s ease;
+			}
+			@keyframes mask-p {
+				0%{
+					opacity: 0;
+					transform: translate3d(100%,-50%,0) scale(0,0);
+				}
+				100%{
+					opacity: 1;
+					transform: translate3d(0,0,0) scale(1,1);
+				}
+			}
+
+		}
+		.tu3 {
+			width: 100%;
+			height: 100vh;
+			background-color: #2d2d2d;
+			transition: all .8s ease 1s;
+			h1 {
+				font-size: 150px;
+				color: #262626;
+				line-height: 160px;
+				font-weight: 700;
+			}
+			.scr {
+				width: 100%;
+				height: 100%;
+				li {
+					width: percentage(1/3);
+					padding-top: 30px;
+					float: left;
+					padding-left: 15px;
+					padding-right: 15px;
+					p {
+						color: #3d3d3d;
+						text-decoration: none;
+						line-height: 30px;
+						padding: 10px 0;
+						font-size: 14px;
+						transition: 0.4s;
+					}
+				}
+			}
+			.bias {
+				width: 100%;
+				height: 100%;
+				.piece {
+					position: absolute;
+					left: 50%;
+					transition: transform 1s linear;
+					.top_face {
+						background: blue;
+						top: -158px;
+						transform: rotate(60deg);
+						.face {
+							width: 180px;
+							height: 180px;
+							transform: skew(0deg, -30deg) scale(1, 1.16);
+						}
+					}
+					.left_face {
+						transform: skew(0deg, 30deg);
+						position: absolute;
+						width: 180px;
+						height: 180px;
+						background: red;
+					}
+				}
+			}
+		}
+		.tu4 {
+			width: 100%;
+			height: 100vh;
+			background: url("../img/my-bj5.jpg")no-repeat;
+			background-size: cover;
+			overflow: hidden;
+			h2{
+				margin-top: 20px;
+				font-size: 40px;
+				color: #262626;
+				font-weight: 700;
+				text-align: center;
+			}
+
+			.lianxi{
+				width: 100%;
+				height: 30%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				margin-left: -15%;
+			}
+			.shang{
+				width: 100%;
+				height: 50%;
+				background: #16BA9D;
+				transition: all 0.8s ease;
+			}
+
+			.xia{
+				width: 100%;
+				height: 50%;
+				background: #16BA9D;
+				transition: all 0.8s ease;
+			}
+			p{
+				text-align: center;
+				color: #333;
+				font-size: 26px;
+				font-weight: 600;
+				font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+			}
+		}
+
+		.active .package h2{
+			animation: right 2s ease;
+		}
+		@keyframes right {
+			0%{
+				opacity:0;
+				transform: translate3d(100%,0,0);
+			}
+			100%{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
+		.active .package p{
+			animation: left 2s ease;
+		}
+		@keyframes left {
+			0%{
+				opacity:0;
+				transform: translate3d(-100%,0,0);
+			}
+			100%{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
+
+		.active .package .shang{
+			transform: translate3d(0,-30%,0);
+		}
+		.active .package .xia{
+			transform: translate3d(0,30%,0);
+		}
+	}
+}
